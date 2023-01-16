@@ -22,18 +22,28 @@
                     </div>
                 </div>
             </div>
-            <aside id="explorer">
-                <nav>
-                    <ul>
-                        <li>Local templates</li>
-                        <li>Global templates</li>
-                        <li>Older local memes</li>
-                    </ul>
+            <div id="explorer">
+                <h1>Explore templates</h1>
+                <nav class="tabs">
+                    <div class="tab"><label for="tab1">Local templates</label></div>
+                    <div class="tab"><label for="tab2">Global templates</label></div>
+                    <div class="tab"><label for="tab3">Memes previously made</label></div>
                 </nav>
-                <div id="local-templates" class="gallery"></div>
-                <div id="global-templates" class="gallery"></div>
-                <div id="older-local-memes" class="gallery"></div>
-            </aside>
+                <input type="radio" id="tab1" name="css-tabs" checked />
+                <div id="local-templates" class="gallery" style="background-color: rgb(181, 168, 255)">
+                    <h1>Local templates</h1>
+                </div>
+
+                <input type="radio" id="tab2" name="css-tabs" />
+                <div id="global-templates" class="gallery" style="background-color: pink">
+                    <h1>Global templates</h1>
+                </div>
+
+                <input type="radio" id="tab3" name="css-tabs" />
+                <div id="older-local-memes" class="gallery" style="background-color: mediumspringgreen">
+                    <h1>Memes previously made</h1>
+                </div>
+            </div>
         </section>
     </body>
 </html>

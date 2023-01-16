@@ -17,12 +17,13 @@ body {
   display: flex;
   flex-wrap: wrap; }
 
+#editor,
+#explorer {
+  padding: 0 1rem 1rem 1rem; }
+
 #editor {
   background-color: yellow;
-  padding: 1rem;
-  flex: 1;
-  min-width: 500px;
-  max-width: 1000px;
+  flex: clamp(500px, 75%, 1000px);
   display: flex;
   flex-direction: column; }
   #editor > div {
@@ -39,6 +40,29 @@ body {
     background-color: blueviolet; }
 
 #explorer {
-  min-width: 300px; }
+  flex: clamp(300px, 25%, 800px);
+  background-color: red;
+  display: flex;
+  flex-direction: column; }
+  #explorer [type="radio"] {
+    /* hiding the inputs */
+    display: none; }
+  #explorer .gallery {
+    /* hiding the contents by default */
+    display: none;
+    flex: 1; }
+  #explorer [type="radio"]:checked + .gallery {
+    display: block; }
+  #explorer .tabs {
+    display: flex;
+    gap: 2rem; }
+  #explorer .tab > label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer; }
+  #explorer .tab {
+    border: solid black 1px; }
+  #explorer .tab:hover > label {
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
