@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Friends Meme Maker</title>
-	</head>
-	<body>
-		<section></section>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>Friends Meme Maker</title>
+    </head>
+    <body>
+        <header id="navbar">
+            <h1>Friends Meme Generator</h1>
+        </header>
+        <section id="workspace">
+            <div id="editor">
+                <h1>Create your meme</h1>
+                <div>
+                    <div id="view-area"></div>
+                    <div id="customization-area">
+                        <div id="overlays"></div>
+                        <div id="texts-and-images"></div>
+                    </div>
+                </div>
+            </div>
+            <aside id="explorer">
+                <nav>
+                    <ul>
+                        <li>Local templates</li>
+                        <li>Global templates</li>
+                        <li>Older local memes</li>
+                    </ul>
+                </nav>
+                <div id="local-templates" class="gallery"></div>
+                <div id="global-templates" class="gallery"></div>
+                <div id="older-local-memes" class="gallery"></div>
+            </aside>
+        </section>
+    </body>
 </html>

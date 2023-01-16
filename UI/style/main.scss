@@ -1,0 +1,59 @@
+body {
+    background-color: lightgray;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#navbar {
+    background-color: darkgray;
+
+    h1 {
+        margin: 0;
+        padding: 0.5em 1rem;
+        text-align: center;
+    }
+}
+
+#workspace {
+    flex: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#editor {
+    background-color: yellow;
+    padding: 1rem;
+
+    flex: 1;
+    min-width: 500px;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+        flex: 1;
+        background-color: red;
+
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    #view-area {
+        flex: clamp(300px, 60%, 1000px);
+        background-color: blue;
+    }
+
+    #customization-area {
+        flex: clamp(300px, 40%, 800px);
+        background-color: blueviolet;
+    }
+}
+
+#explorer {
+    min-width: 300px;
+}
