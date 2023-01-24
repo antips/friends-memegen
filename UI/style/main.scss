@@ -84,6 +84,7 @@ $navbar-height: 6rem;
         flex-wrap: wrap;
         overflow-y: scroll;
         justify-content: space-evenly;
+        padding: 1rem;
     }
 
     [type="radio"]:checked + .gallery {
@@ -96,7 +97,6 @@ $navbar-height: 6rem;
 
     .tabs {
         display: flex;
-        gap: 2rem;
     }
 
     .tab > label {
@@ -104,12 +104,29 @@ $navbar-height: 6rem;
         letter-spacing: 1px;
         cursor: pointer;
     }
+}
 
-    .tab {
-        border: solid black 1px;
+/* Style tabs */
+$tabs-border-size: 2px;
+#explorer {
+    .tabs {
+        border-bottom: solid $tabs-border-size gray;
+        margin: $tabs-border-size;
     }
 
-    .tab:hover > label {
-        font-weight: bold;
+    .tab {
+        margin-bottom: -$tabs-border-size;
+        padding: 0.5rem 1rem;
+        color: gray;
+        border-bottom: solid $tabs-border-size transparent;
+
+        &:hover {
+            color: black;
+        }
+
+        &.checked {
+            color: black;
+            border-color: black;
+        }
     }
 }

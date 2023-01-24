@@ -59,21 +59,32 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    padding: 1rem; }
   #explorer [type="radio"]:checked + .gallery {
     display: flex; }
   #explorer img {
     object-fit: cover; }
   #explorer .tabs {
-    display: flex;
-    gap: 2rem; }
+    display: flex; }
   #explorer .tab > label {
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer; }
-  #explorer .tab {
-    border: solid black 1px; }
-  #explorer .tab:hover > label {
-    font-weight: bold; }
+
+/* Style tabs */
+#explorer .tabs {
+  border-bottom: solid 2px gray;
+  margin: 2px; }
+#explorer .tab {
+  margin-bottom: -2px;
+  padding: 0.5rem 1rem;
+  color: gray;
+  border-bottom: solid 2px transparent; }
+  #explorer .tab:hover {
+    color: black; }
+  #explorer .tab.checked {
+    color: black;
+    border-color: black; }
 
 /*# sourceMappingURL=style.css.map */
