@@ -1,11 +1,15 @@
+body,
+html {
+  height: 100%; }
+
 body {
   background-color: lightgray;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; }
+  flex-direction: column; }
 
 #navbar {
+  height: 6rem;
   background-color: darkgray; }
   #navbar h1 {
     margin: 0;
@@ -19,6 +23,7 @@ body {
 
 #editor,
 #explorer {
+  height: calc(100vh - 6rem);
   padding: 0 1rem 1rem 1rem; }
 
 #editor {
@@ -50,9 +55,15 @@ body {
   #explorer .gallery {
     /* hiding the contents by default */
     display: none;
-    flex: 1; }
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-evenly; }
   #explorer [type="radio"]:checked + .gallery {
-    display: block; }
+    display: flex; }
+  #explorer img {
+    object-fit: cover; }
   #explorer .tabs {
     display: flex;
     gap: 2rem; }
